@@ -1,3 +1,44 @@
+Put this picture in there and get rid of the Hi, I'm Kayla and just say Kayla Yap. Robotics, artificial intelligence, then engineering.
+
+Yep — that was the issue. I changed the HTML to look for:
+
+./kayla-profile.jpeg
+
+Use these two files in the root of your GitHub Pages repo:
+
+Updated index.html
+Profile image as JPEG
+
+Make sure the filename on GitHub is exactly:
+
+kayla-profile.jpeg
+
+Case and extension have to match exactly. 
+
+index.html
+HTML
+put this in my about me I am a multidisciplinary engineer with experience in robotics, artificial intelligence, embedded systems, software development, and hardware testing. I earned my Bachelor’s degree in Biomedical Engineering from The University of Texas at Dallas in 2025, and I am completing my Master’s degree in Systems Engineering and Management with a concentration in Artificial Intelligence and Applied Machine Learning in 2026.
+
+My experience includes leading the technical development of an AI companion robot and working across both hardware and software. I have worked with embedded systems, sensors, microcontrollers, Raspberry Pi, machine learning models, voice processing, and conversational AI. I also have experience with mobile app development, backend systems, front end development, databases, and Google Cloud Platform.
+
+I have hands on experience with PCB bring up, troubleshooting, functional testing, electrical validation, and embedded system integration. I have also worked with Python, C, C++, MATLAB, Flutter, Dart, and web technologies.
+
+I enjoy working on projects where I can combine different areas of engineering and solve real technical problems. My background has given me experience working across hardware, software, and AI, and I am especially interested in robotics, autonomous systems, embedded systems, artificial intelligence, and engineering roles where I can help build and test real products.
+
+Done — I replaced the About Me section with your full updated version and cleaned up the wording slightly for readability while keeping your meaning.
+
+Download the updated index.html 
+
+index.html
+HTML
+also move my pic  to the very tp[ and make it a little smaller and square, center it tho
+
+Done — I moved your photo to the very top of the hero section, centered it, and made it a smaller square.
+
+Download the updated index.html
+
+Keep kayla-profile.jpeg in the same GitHub folder as index.html. 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,10 +167,11 @@
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 70px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
+      gap: 28px;
     }
 
     .hero-label {
@@ -160,15 +202,15 @@
 
     .hero p {
       max-width: 700px;
-      margin-bottom: 35px;
+      margin: 0 auto 35px;
       color: var(--muted);
       font-size: 1.08rem;
     }
 
     .hero-photo-wrap {
       position: relative;
-      justify-self: end;
-      width: min(100%, 410px);
+      width: 240px;
+      margin: 0 auto;
     }
 
     .hero-photo-wrap::before {
@@ -183,11 +225,11 @@
     .hero-photo {
       position: relative;
       z-index: 1;
-      width: 100%;
-      aspect-ratio: 4 / 5;
+      width: 240px;
+      height: 240px;
       object-fit: cover;
-      object-position: center;
-      border-radius: 24px;
+      object-position: center 24%;
+      border-radius: 18px;
       border: 1px solid var(--border);
     }
 
@@ -195,6 +237,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
+    }
+
+    .hero .button-group {
+      justify-content: center;
     }
 
     .button {
@@ -470,9 +516,12 @@
       }
 
       .hero-photo-wrap {
-        justify-self: start;
-        width: min(100%, 420px);
-        margin-top: 20px;
+        width: 210px;
+      }
+
+      .hero-photo {
+        width: 210px;
+        height: 210px;
       }
 
       .timeline-heading {
@@ -503,6 +552,14 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="hero-grid">
+
+        <div class="hero-photo-wrap">
+          <img
+            src="./kayla-profile.jpeg"
+            alt="Kayla Yhap"
+            class="hero-photo"
+          >
+        </div>
 
         <div class="hero-content">
           <div class="hero-label">
@@ -541,14 +598,6 @@
               LinkedIn
             </a>
           </div>
-        </div>
-
-        <div class="hero-photo-wrap">
-          <img
-            src="./kayla-profile.jpeg"
-            alt="Kayla Yhap"
-            class="hero-photo"
-          >
         </div>
 
       </div>
@@ -607,56 +656,41 @@
     <div class="container">
       <h2 class="section-title">About Me</h2>
 
-      <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I am a multidisciplinary engineer with experience in robotics,
+          artificial intelligence, embedded systems, software development,
+          and hardware testing. I earned my Bachelor’s degree in Biomedical
+          Engineering from The University of Texas at Dallas in 2025, and I am
+          completing my Master’s degree in Systems Engineering and Management
+          with a concentration in Artificial Intelligence and Applied Machine
+          Learning in 2026.
+        </p>
 
-        <div class="about-text">
-          <p>
-            I'm an engineer with a background in biomedical engineering
-            and systems engineering who enjoys working across multiple
-            technical disciplines rather than focusing on only one layer
-            of a system.
-          </p>
+        <p>
+          My experience includes leading the technical development of an AI
+          companion robot and working across both hardware and software. I have
+          worked with embedded systems, sensors, microcontrollers, Raspberry Pi,
+          machine learning models, voice processing, and conversational AI. I
+          also have experience with mobile app development, backend systems,
+          front-end development, databases, and Google Cloud Platform.
+        </p>
 
-          <p>
-            My experience includes artificial intelligence and machine
-            learning, backend development, cloud-hosted systems,
-            databases, mobile application development, front-end interfaces,
-            robotics, embedded systems, hardware integration, and engineering validation.
-          </p>
+        <p>
+          I have hands-on experience with PCB bring-up, troubleshooting,
+          functional testing, electrical validation, and embedded system
+          integration. I have also worked with Python, C, C++, MATLAB, Flutter,
+          Dart, and web technologies.
+        </p>
 
-          <p>
-            I enjoy understanding how the entire system works — from the
-            user-facing application and backend services to data storage,
-            intelligent models, hardware, testing, and deployment.
-          </p>
-        </div>
-
-        <div class="about-box">
-          <div class="about-item">
-            <h3>Software</h3>
-            <p>
-              Full-stack development, cloud systems, APIs,
-              databases, mobile applications, and user-facing interfaces.
-            </p>
-          </div>
-
-          <div class="about-item">
-            <h3>Intelligent Systems</h3>
-            <p>
-              Artificial intelligence, machine learning,
-              robotics, and applied intelligent systems.
-            </p>
-          </div>
-
-          <div class="about-item">
-            <h3>Engineering</h3>
-            <p>
-              System integration, embedded development, testing,
-              troubleshooting, and multidisciplinary problem solving.
-            </p>
-          </div>
-        </div>
-
+        <p>
+          I enjoy working on projects where I can combine different areas of
+          engineering and solve real technical problems. My background has given
+          me experience working across hardware, software, and AI, and I am
+          especially interested in robotics, autonomous systems, embedded
+          systems, artificial intelligence, and engineering roles where I can
+          help build and test real products.
+        </p>
       </div>
     </div>
   </section>
@@ -936,3 +970,5 @@
 
 </body>
 </html>
+index.html
+HTML
