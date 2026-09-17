@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kayla Yhap | Engineering Portfolio</title>
+
+  <meta
+    name="description"
+    content="Kayla Yhap - Biomedical Engineer, Systems Engineer, Robotics and AI Developer."
+  />
+
+  <style>
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --background: #080b12;
+      --background-light: #10151f;
+      --card: #121925;
+      --card-hover: #172131;
+      --text: #f5f7fa;
+      --muted: #aeb7c5;
+      --accent: #78a6ff;
+      --accent-light: #9cc0ff;
+      --border: rgba(255, 255, 255, 0.1);
+      --max-width: 1150px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 45px;
+      max-width: 700px;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(8, 11, 18, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 18px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+
+      background:
+        radial-gradient(circle at 80% 25%, rgba(82, 126, 255, 0.19), transparent 28%),
+        radial-gradient(circle at 10% 80%, rgba(90, 134, 255, 0.12), transparent 30%);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-label {
+      color: var(--accent-light);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 8vw, 6.5rem);
+      line-height: 0.98;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 36px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #07101d;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      background: var(--accent-light);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      color: white;
+    }
+
+    .button-secondary:hover {
+      background: var(--background-light);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--background-light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .about-box {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    .about-item {
+      margin-bottom: 22px;
+    }
+
+    .about-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-item h3 {
+      font-size: 0.95rem;
+      color: var(--accent-light);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-item p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      transition: 0.3s;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      background: var(--card-hover);
+      border-color: rgba(120, 166, 255, 0.35);
+    }
+
+    .project-number {
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .project-card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      background: rgba(120, 166, 255, 0.1);
+      color: var(--accent-light);
+      border-radius: 20px;
+    }
+
+    .project-link {
+      color: white;
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      color: var(--accent-light);
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
+
+    .experience {
+      background: var(--background-light);
+    }
+
+    .timeline {
+      border-left: 1px solid var(--border);
+      margin-left: 10px;
+      padding-left: 35px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--accent);
+      left: -42px;
+      top: 7px;
+    }
+
+    .timeline-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-heading h3 {
+      font-size: 1.35rem;
+    }
+
+    .timeline-date {
+      color: var(--accent-light);
+      white-space: nowrap;
+    }
+
+    .timeline-company {
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .timeline-item ul {
+      color: var(--muted);
+      margin-left: 20px;
+    }
+
+    .timeline-item li {
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .skill-card h3 {
+      color: var(--accent-light);
+      margin-bottom: 14px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       EDUCATION
+    ========================== */
+
+    .education {
+      background: var(--background-light);
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .education-card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    .education-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .education-card h4 {
+      color: var(--accent-light);
+      margin-bottom: 12px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-content {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 25px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 850px) {
+      .about-grid,
+      .project-grid,
+      .skills-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .timeline-heading {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .hero {
+        padding-top: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        KAYLA<span>.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-label">
+          Engineering • Robotics • Artificial Intelligence
+        </div>
+
+        <h1>
+          Hi, I'm <span>Kayla.</span>
+        </h1>
+
+        <h2>
+          Biomedical Engineer & Systems Engineer building intelligent,
+          connected systems.
+        </h2>
+
+        <p>
+          I work at the intersection of robotics, artificial intelligence,
+          embedded systems, hardware testing, and software development.
+          I enjoy taking projects from an idea to a working physical system.
+        </p>
+
+        <div class="button-group">
+
+          <a href="#projects" class="button button-primary">
+            View My Projects
+          </a>
+
+          <a
+            href="https://github.com/kaylayhap232"
+            target="_blank"
+            class="button button-secondary"
+          >
+            GitHub
+          </a>
+
+          <!-- Replace # with your LinkedIn URL -->
+          <a href="#" class="button button-secondary">
+            LinkedIn
+          </a>
+
+          <!--
+          Upload your resume to this repository and rename it resume.pdf.
+          Then change this to href="resume.pdf"
+          -->
+          <a href="#" class="button button-secondary">
+            Resume
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section class="about" id="about">
+    <div class="container">
+
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p>
+            I'm an engineer with a background in biomedical engineering
+            and systems engineering, with a focus on artificial intelligence,
+            applied machine learning, robotics, and embedded systems.
+          </p>
+
+          <p>
+            My projects combine hardware and software. I've worked with
+            Raspberry Pi and ESP32 platforms, embedded electronics,
+            mobile applications, machine learning models, conversational AI,
+            speech processing, PCB testing, and full system integration.
+          </p>
+
+          <p>
+            What I enjoy most is solving problems across the entire system:
+            understanding the hardware, developing the software, testing
+            interfaces, troubleshooting failures, and turning a concept into
+            something that actually works.
+          </p>
+
+        </div>
+
+        <div class="about-box">
+
+          <div class="about-item">
+            <h3>Primary Interests</h3>
+            <p>
+              Robotics, AI/ML, embedded systems, computer vision,
+              systems engineering and hardware/software integration.
+            </p>
+          </div>
+
+          <div class="about-item">
+            <h3>Engineering Focus</h3>
+            <p>
+              Building, integrating, testing and troubleshooting
+              multidisciplinary systems.
+            </p>
+          </div>
+
+          <div class="about-item">
+            <h3>Current Focus</h3>
+            <p>
+              Artificial intelligence and applied machine learning
+              for intelligent robotic systems.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section id="projects">
+    <div class="container">
+
+      <h2 class="section-title">Featured Projects</h2>
+
+      <p class="section-subtitle">
+        A selection of projects involving robotics, artificial intelligence,
+        embedded systems and hardware/software integration.
+      </p>
+
+      <div class="project-grid">
+
+
+        <!-- LUMII -->
+
+        <article class="project-card">
+
+          <div class="project-number">01 / ROBOTICS</div>
+
+          <h3>Lumii Interactive Robot</h3>
+
+          <p>
+            An interactive robotic platform combining conversational AI,
+            speech recognition, emotion recognition, embedded electronics,
+            mobile robotics, and a companion application.
+          </p>
+
+          <div class="project-tags">
+            <span class="tag">Raspberry Pi 5</span>
+            <span class="tag">ESP32</span>
+            <span class="tag">Python</span>
+            <span class="tag">Whisper</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+          </div>
+
+          <!-- Change this URL once you create the Lumii repository -->
+          <a
+            href="https://github.com/kaylayhap232"
+            target="_blank"
+            class="project-link"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+
+        <!-- EMBEDDED SYSTEMS -->
+
+        <article class="project-card">
+
+          <div class="project-number">02 / EMBEDDED SYSTEMS</div>
+
+          <h3>Embedded Hardware Development</h3>
+
+          <p>
+            Embedded system development using ESP32 and Raspberry Pi platforms,
+            including sensors, displays, digital audio interfaces, power
+            systems, communication buses, and hardware troubleshooting.
+          </p>
+
+          <div class="project-tags">
+            <span class="tag">ESP32-S3</span>
+            <span class="tag">I2C</span>
+            <span class="tag">I2S</span>
+            <span class="tag">PCB</span>
+            <span class="tag">C/C++</span>
+            <span class="tag">Python</span>
+          </div>
+
+          <a
+            href="https://github.com/kaylayhap232"
+            target="_blank"
+            class="project-link"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+
+        <!-- MACHINE LEARNING -->
+
+        <article class="project-card">
+
+          <div class="project-number">03 / ARTIFICIAL INTELLIGENCE</div>
+
+          <h3>Machine Learning & AI</h3>
+
+          <p>
+            Machine learning projects exploring neural networks, deep learning,
+            multimodal AI, model training, computer vision, and intelligent
+            system applications.
+          </p>
+
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Multimodal AI</span>
+          </div>
+
+          <a
+            href="https://github.com/kaylayhap232"
+            target="_blank"
+            class="project-link"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+
+        <!-- TEST ENGINEERING -->
+
+        <article class="project-card">
+
+          <div class="project-number">04 / TEST ENGINEERING</div>
+
+          <h3>Hardware Testing & PCB Troubleshooting</h3>
+
+          <p>
+            Hardware validation and troubleshooting involving continuity,
+            power rails, voltage and signal measurements, component testing,
+            PCB bring-up, functional testing, and system-level diagnostics.
+          </p>
+
+          <div class="project-tags">
+            <span class="tag">ICT</span>
+            <span class="tag">FCT</span>
+            <span class="tag">PCB Bring-Up</span>
+            <span class="tag">LabVIEW</span>
+            <span class="tag">Troubleshooting</span>
+          </div>
+
+          <a
+            href="https://github.com/kaylayhap232"
+            target="_blank"
+            class="project-link"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       EXPERIENCE
+  ========================== -->
+
+  <section class="experience" id="experience">
+    <div class="container">
+
+      <h2 class="section-title">Experience</h2>
+
+      <p class="section-subtitle">
+        Experience spanning robotics, engineering development,
+        hardware/software integration, testing and AI.
+      </p>
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-heading">
+            <h3>Co-Founder & Technical Lead</h3>
+            <span class="timeline-date">Engineering & Robotics</span>
+          </div>
+
+          <div class="timeline-company">
+            Lumiinous
+          </div>
+
+          <ul>
+            <li>
+              Led technical development of an AI-enabled interactive
+              robotic platform.
+            </li>
+
+            <li>
+              Integrated Raspberry Pi and ESP32-based embedded hardware.
+            </li>
+
+            <li>
+              Developed and integrated speech recognition,
+              conversational AI and emotion recognition capabilities.
+            </li>
+
+            <li>
+              Worked across hardware, software, electronics,
+              mobile application development and system testing.
+            </li>
+
+            <li>
+              Performed PCB bring-up, debugging, hardware troubleshooting
+              and functional testing.
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-heading">
+            <h3>Engineering Projects</h3>
+            <span class="timeline-date">Hardware + Software</span>
+          </div>
+
+          <div class="timeline-company">
+            Academic & Independent Development
+          </div>
+
+          <ul>
+            <li>
+              Developed machine learning and artificial intelligence projects.
+            </li>
+
+            <li>
+              Worked with embedded platforms, electronics,
+              communication interfaces and sensors.
+            </li>
+
+            <li>
+              Applied systems engineering principles to multidisciplinary
+              technical projects.
+            </li>
+
+            <li>
+              Developed software using Python, C, C++, Dart and web technologies.
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SKILLS
+  ========================== -->
+
+  <section id="skills">
+    <div class="container">
+
+      <h2 class="section-title">Technical Skills</h2>
+
+      <p class="section-subtitle">
+        Technologies and engineering areas I've worked with.
+      </p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <p>
+            Python, C, C#, Dart, SQL, HTML, CSS
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Artificial Intelligence</h3>
+          <p>
+            Machine Learning, Deep Learning, Neural Networks,
+            Computer Vision, LLMs, Whisper, Multimodal AI
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Robotics</h3>
+          <p>
+            Raspberry Pi, ESP32, mobile robotics,
+            embedded integration and intelligent systems
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Embedded Systems</h3>
+          <p>
+            I2C, I2S, microcontrollers, displays, sensors,
+            audio hardware and power systems
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Hardware & Testing</h3>
+          <p>
+            PCB bring-up, ICT/FCT, continuity testing,
+            power rails, voltage measurements, signals,
+            component testing and troubleshooting
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Software & Tools</h3>
+          <p>
+            Git, GitHub, Flutter, Firebase, LabVIEW,
+            mobile app development and system integration
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       EDUCATION
+  ========================== -->
+
+  <section class="education" id="education">
+    <div class="container">
+
+      <h2 class="section-title">Education</h2>
+
+      <p class="section-subtitle">
+        My engineering education combines biomedical engineering,
+        systems thinking and artificial intelligence.
+      </p>
+
+      <div class="education-grid">
+
+        <div class="education-card">
+
+          <h3>Master of Science</h3>
+
+          <h4>
+            Systems Engineering & Management
+          </h4>
+
+          <p>
+            Concentration in Artificial Intelligence /
+            Applied Machine Learning
+          </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+          <h3>Bachelor of Science</h3>
+
+          <h4>
+            Biomedical Engineering
+          </h4>
+
+          <p>
+            Engineering foundation spanning mathematics,
+            biology, electronics, design and technical problem solving.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="contact-content">
+
+        <h2>Let's Build Something.</h2>
+
+        <p>
+          I'm interested in opportunities involving robotics,
+          embedded systems, artificial intelligence, machine learning,
+          systems engineering and hardware/software integration.
+        </p>
+
+        <div class="button-group" style="justify-content: center;">
+
+          <!-- Replace # with your email -->
+          <a href="#" class="button button-primary">
+            Email Me
+          </a>
+
+          <a
+            href="https://github.com/kaylayhap232"
+            target="_blank"
+            class="button button-secondary"
+          >
+            GitHub
+          </a>
+
+          <!-- Replace # with LinkedIn URL -->
+          <a href="#" class="button button-secondary">
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+    <p>
+      © 2026 Kayla Yhap. Built with HTML & CSS.
+    </p>
+  </footer>
+
+
+</body>
+</html>
