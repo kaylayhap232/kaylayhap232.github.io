@@ -1,3 +1,8 @@
+
+Yes. Your portfolio was underselling the software/full-stack side of your experience. I’d make it clear that you can work across AI/ML + robotics + cloud/backend + databases + mobile/front-end + hardware.
+
+I also added your real LinkedIn URL and MATLAB. Replace your current index.html with this:
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +14,11 @@
 
   <meta
     name="description"
-    content="Portfolio of Kayla Yhap, a biomedical and systems engineer focused on robotics, artificial intelligence, machine learning, embedded systems, and engineering development."
+    content="Portfolio of Kayla Yhap, a biomedical and systems engineer with experience in artificial intelligence, machine learning, robotics, cloud systems, full-stack development, and embedded engineering."
   >
 
   <style>
+
     /* =========================================================
        GLOBAL
     ========================================================= */
@@ -70,7 +76,7 @@
     }
 
     .section-subtitle {
-      max-width: 750px;
+      max-width: 760px;
       color: var(--muted);
       margin-bottom: 42px;
     }
@@ -88,7 +94,9 @@
       position: fixed;
       top: 0;
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
 
       background: rgba(8, 11, 18, 0.9);
@@ -99,6 +107,7 @@
 
     .nav-container {
       max-width: var(--max-width);
+
       margin: auto;
       padding: 18px 25px;
 
@@ -139,6 +148,7 @@
 
     .hero {
       min-height: 100vh;
+
       display: flex;
       align-items: center;
 
@@ -156,7 +166,7 @@
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 920px;
     }
 
     .hero-label {
@@ -183,7 +193,7 @@
     }
 
     .hero h2 {
-      max-width: 850px;
+      max-width: 880px;
 
       margin-bottom: 22px;
 
@@ -194,7 +204,7 @@
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 760px;
 
       margin-bottom: 35px;
 
@@ -310,7 +320,9 @@
     .about-grid {
       display: grid;
       grid-template-columns: 1.3fr 1fr;
+
       gap: 60px;
+
       align-items: start;
     }
 
@@ -412,7 +424,7 @@
     }
 
     .experience-summary {
-      max-width: 850px;
+      max-width: 880px;
 
       margin-bottom: 30px;
 
@@ -421,7 +433,10 @@
 
     .experience-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(235px, 1fr));
+
       gap: 18px;
     }
 
@@ -467,7 +482,10 @@
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
       gap: 24px;
     }
 
@@ -504,17 +522,20 @@
 
     .project-card h3 {
       margin-bottom: 12px;
+
       font-size: 1.5rem;
     }
 
     .project-card p {
       margin-bottom: 20px;
+
       color: var(--muted);
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
+
       gap: 8px;
 
       margin-bottom: 24px;
@@ -548,7 +569,10 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
       gap: 20px;
     }
 
@@ -563,6 +587,7 @@
 
     .skill-card h3 {
       margin-bottom: 12px;
+
       color: var(--accent-light);
     }
 
@@ -580,12 +605,13 @@
     }
 
     .contact-content {
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
     }
 
     .contact h2 {
       margin-bottom: 18px;
+
       font-size: clamp(2.5rem, 6vw, 4rem);
     }
 
@@ -628,10 +654,7 @@
       }
 
       .education-grid,
-      .about-grid,
-      .experience-grid,
-      .project-grid,
-      .skills-grid {
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
@@ -655,6 +678,7 @@
 
 
 <body>
+
 
   <!-- =========================================================
        NAVIGATION
@@ -712,7 +736,7 @@
       <div class="hero-content">
 
         <div class="hero-label">
-          Engineering • Robotics • Artificial Intelligence
+          Engineering • AI • Robotics • Software
         </div>
 
         <h1>
@@ -720,15 +744,17 @@
         </h1>
 
         <h2>
-          Biomedical Engineer & Systems Engineer focused on intelligent,
-          multidisciplinary systems.
+          Biomedical Engineer & Systems Engineer building
+          intelligent systems across hardware, software, and AI.
         </h2>
 
         <p>
-          My work and projects span robotics, artificial intelligence,
-          machine learning, embedded systems, testing, and engineering
-          development.
+          My experience spans artificial intelligence, machine learning,
+          robotics, cloud infrastructure, backend systems, mobile application
+          development, databases, embedded engineering, and system-level
+          testing and integration.
         </p>
+
 
         <div class="button-group">
 
@@ -748,9 +774,10 @@
             GitHub
           </a>
 
-          <!-- Replace # with your LinkedIn URL -->
           <a
-            href="#"
+            href="https://www.linkedin.com/in/kayla-yhap-1bba8929a/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="button button-secondary"
           >
             LinkedIn
@@ -758,8 +785,9 @@
 
           <!--
             Upload your resume to this repository as resume.pdf
-            and change # to resume.pdf
+            then change # below to resume.pdf
           -->
+
           <a
             href="#"
             class="button button-secondary"
@@ -793,14 +821,13 @@
 
       <p class="section-subtitle">
         Engineering education spanning biomedical engineering,
-        systems engineering, and applied artificial intelligence.
+        systems engineering, artificial intelligence, and applied
+        machine learning.
       </p>
 
 
       <div class="education-grid">
 
-
-        <!-- MASTER'S -->
 
         <div class="education-card">
 
@@ -828,8 +855,6 @@
         </div>
 
 
-        <!-- BACHELOR'S -->
-
         <div class="education-card">
 
           <div class="education-year">
@@ -850,7 +875,8 @@
 
           <p>
             Engineering foundation in biomedical systems,
-            electronics, modeling, design, and technical problem solving.
+            electronics, modeling, design, software,
+            and technical problem solving.
           </p>
 
         </div>
@@ -883,22 +909,23 @@
 
           <p>
             I'm an engineer with a background in biomedical engineering
-            and systems engineering, with a focus on artificial intelligence,
-            applied machine learning, robotics, and multidisciplinary
-            engineering development.
+            and systems engineering who enjoys working across multiple
+            technical disciplines rather than focusing on only one layer
+            of a system.
           </p>
 
           <p>
-            I enjoy working across both hardware and software and approaching
-            problems from a system-level perspective. My experience includes
-            technical development, integration, testing, troubleshooting,
-            machine learning, and engineering analysis.
+            My experience includes artificial intelligence and machine
+            learning, backend API development, cloud-hosted systems,
+            relational databases, authentication, mobile application
+            development, front-end interfaces, robotics, embedded systems,
+            hardware integration, and engineering validation.
           </p>
 
           <p>
-            I'm especially interested in roles where I can contribute to
-            intelligent physical systems and help move engineering concepts
-            from development into reliable real-world applications.
+            I enjoy understanding how the entire system works — from the
+            user-facing application and backend services to data storage,
+            intelligent models, hardware, testing, and deployment.
           </p>
 
         </div>
@@ -906,47 +933,50 @@
 
         <div class="about-box">
 
+
           <div class="about-item">
 
             <h3>
-              Areas of Interest
+              Software
             </h3>
 
             <p>
-              Robotics, artificial intelligence, machine learning,
-              embedded systems, and systems engineering.
+              Full-stack development, cloud systems, REST APIs,
+              databases, mobile applications, and user-facing interfaces.
             </p>
 
           </div>
 
+
           <div class="about-item">
 
             <h3>
-              Engineering Focus
+              Intelligent Systems
             </h3>
 
             <p>
-              System integration, testing, technical development,
+              Artificial intelligence, machine learning,
+              robotics, and applied intelligent systems.
+            </p>
+
+          </div>
+
+
+          <div class="about-item">
+
+            <h3>
+              Engineering
+            </h3>
+
+            <p>
+              System integration, embedded development, testing,
               troubleshooting, and multidisciplinary problem solving.
             </p>
 
           </div>
 
-          <div class="about-item">
-
-            <h3>
-              Current Direction
-            </h3>
-
-            <p>
-              Applying AI and machine learning to engineering
-              and intelligent systems.
-            </p>
-
-          </div>
 
         </div>
-
 
       </div>
 
@@ -971,8 +1001,8 @@
       </h2>
 
       <p class="section-subtitle">
-        Experience in robotics, artificial intelligence,
-        engineering development, testing, and technical leadership.
+        Experience spanning robotics, AI, software development,
+        cloud systems, embedded engineering, and technical leadership.
       </p>
 
 
@@ -1000,9 +1030,9 @@
 
 
           <p class="experience-summary">
-            Lead and contribute to multidisciplinary engineering development
-            for an AI-focused robotics company, including product development,
-            system integration, validation, troubleshooting, and technical
+            Lead and contribute to multidisciplinary product development
+            across software, cloud infrastructure, artificial intelligence,
+            robotics, embedded systems, integration, testing, and technical
             decision-making.
           </p>
 
@@ -1010,7 +1040,7 @@
           <div class="experience-grid">
 
 
-            <!-- PRODUCT -->
+            <!-- AI PRODUCT -->
 
             <div class="experience-card">
 
@@ -1023,9 +1053,9 @@
               </h4>
 
               <p>
-                Contribute to the development of an AI-powered companion robot
-                designed to create natural, interactive experiences through
-                intelligent conversation and responsive behavior.
+                Contribute to the development of an AI-powered companion
+                robot designed to create natural, interactive experiences
+                through intelligent conversation and responsive behavior.
               </p>
 
               <a
@@ -1040,43 +1070,65 @@
             </div>
 
 
-            <!-- HARDWARE -->
+            <!-- CLOUD / BACKEND -->
 
             <div class="experience-card">
 
               <div class="experience-label">
-                ENGINEERING
+                CLOUD & BACKEND
               </div>
 
               <h4>
-                Embedded Hardware Development
+                Backend Systems & Cloud Development
               </h4>
 
               <p>
-                Support embedded hardware development, prototype integration,
-                debugging, and coordination across hardware and software
-                during product development.
+                Develop cloud-connected backend systems, APIs,
+                authentication workflows, database integrations,
+                and services supporting connected applications
+                and intelligent products.
               </p>
 
             </div>
 
 
-            <!-- TESTING -->
+            <!-- APP / FRONT END -->
 
             <div class="experience-card">
 
               <div class="experience-label">
-                TEST & VALIDATION
+                APPLICATION DEVELOPMENT
               </div>
 
               <h4>
-                Hardware Testing & Troubleshooting
+                Mobile & Front-End Development
               </h4>
 
               <p>
-                Perform functional testing, validation, troubleshooting,
-                and system-level diagnostics to identify issues and improve
-                product reliability.
+                Develop user-facing mobile interfaces and application
+                workflows while integrating authentication, backend APIs,
+                cloud-hosted data, and connected product functionality.
+              </p>
+
+            </div>
+
+
+            <!-- HARDWARE -->
+
+            <div class="experience-card">
+
+              <div class="experience-label">
+                HARDWARE & VALIDATION
+              </div>
+
+              <h4>
+                Embedded Engineering & Testing
+              </h4>
+
+              <p>
+                Support embedded development, system integration,
+                prototype validation, functional testing, debugging,
+                troubleshooting, and system-level diagnostics.
               </p>
 
             </div>
@@ -1106,15 +1158,14 @@
       </h2>
 
       <p class="section-subtitle">
-        Public engineering and machine learning work demonstrating
-        technical analysis, model development, and applied problem solving.
+        Public technical work demonstrating machine learning,
+        engineering analysis, model development, and applied
+        problem solving.
       </p>
 
 
       <div class="project-grid">
 
-
-        <!-- MACHINE LEARNING PROJECT -->
 
         <article class="project-card">
 
@@ -1197,12 +1248,15 @@
       </h2>
 
       <p class="section-subtitle">
-        Engineering tools, technologies, and areas of experience.
+        Technologies and engineering areas I have worked with
+        across software, AI, cloud systems, and hardware development.
       </p>
 
 
       <div class="skills-grid">
 
+
+        <!-- PROGRAMMING -->
 
         <div class="skill-card">
 
@@ -1211,11 +1265,65 @@
           </h3>
 
           <p>
-            Python, C, C#, Dart, SQL, HTML, CSS
+            Python, C, C#, MATLAB, Dart, SQL,
+            HTML, and CSS
           </p>
 
         </div>
 
+
+        <!-- CLOUD BACKEND -->
+
+        <div class="skill-card">
+
+          <h3>
+            Cloud & Backend
+          </h3>
+
+          <p>
+            Google Cloud Platform, FastAPI, REST APIs,
+            Cloud Run, Cloud SQL, SQLAlchemy, authentication,
+            backend services, and cloud deployment.
+          </p>
+
+        </div>
+
+
+        <!-- DATABASES -->
+
+        <div class="skill-card">
+
+          <h3>
+            Databases & Data
+          </h3>
+
+          <p>
+            PostgreSQL, Google Cloud SQL, SQLite,
+            relational data modeling, database integration,
+            queries, and application data management.
+          </p>
+
+        </div>
+
+
+        <!-- FRONT END -->
+
+        <div class="skill-card">
+
+          <h3>
+            Front-End & Mobile
+          </h3>
+
+          <p>
+            Flutter, Dart, mobile application development,
+            responsive user interfaces, API integration,
+            Firebase, and authentication workflows.
+          </p>
+
+        </div>
+
+
+        <!-- AI -->
 
         <div class="skill-card">
 
@@ -1225,25 +1333,30 @@
 
           <p>
             Neural networks, deep learning, machine learning,
-            computer vision, multimodal AI, and model evaluation.
+            computer vision, multimodal AI, model training,
+            and model evaluation.
           </p>
 
         </div>
 
+
+        <!-- ML TOOLS -->
 
         <div class="skill-card">
 
           <h3>
-            ML Tools
+            ML Tools & Analysis
           </h3>
 
           <p>
             JAX, Equinox, Optax, data preprocessing,
-            model training, MAE, RMSE, and technical visualization.
+            MAE, RMSE, loss analysis, and technical visualization.
           </p>
 
         </div>
 
+
+        <!-- ROBOTICS -->
 
         <div class="skill-card">
 
@@ -1252,36 +1365,43 @@
           </h3>
 
           <p>
-            Embedded development, system integration,
-            microcontrollers, single-board computers,
-            and hardware/software interfaces.
+            Embedded development, robotics,
+            system integration, microcontrollers,
+            single-board computers, and
+            hardware/software interfaces.
           </p>
 
         </div>
 
 
+        <!-- TESTING -->
+
         <div class="skill-card">
 
           <h3>
-            Hardware & Testing
+            Hardware & Test Engineering
           </h3>
 
           <p>
-            PCB bring-up, functional testing, hardware validation,
-            signal and voltage testing, debugging, and troubleshooting.
+            PCB bring-up, functional testing,
+            hardware validation, signal and voltage testing,
+            debugging, troubleshooting, and system diagnostics.
           </p>
 
         </div>
 
 
+        <!-- TOOLS -->
+
         <div class="skill-card">
 
           <h3>
-            Development Tools
+            Engineering & Development Tools
           </h3>
 
           <p>
-            Git, GitHub, Flutter, Firebase, LabVIEW,
+            Git, GitHub, Firebase, LabVIEW,
+            cloud development tools, version control,
             and multidisciplinary system development.
           </p>
 
@@ -1313,15 +1433,17 @@
         </h2>
 
         <p>
-          I'm interested in opportunities involving robotics,
-          artificial intelligence, machine learning, systems engineering,
-          embedded systems, and engineering development.
+          I'm interested in opportunities involving artificial intelligence,
+          robotics, software engineering, cloud systems, machine learning,
+          embedded systems, systems engineering, and multidisciplinary
+          product development.
         </p>
 
 
         <div class="button-group">
 
           <!-- Replace # with mailto:your-email -->
+
           <a
             href="#"
             class="button button-primary"
@@ -1338,9 +1460,10 @@
             GitHub
           </a>
 
-          <!-- Replace # with your LinkedIn URL -->
           <a
-            href="#"
+            href="https://www.linkedin.com/in/kayla-yhap-1bba8929a/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="button button-secondary"
           >
             LinkedIn
@@ -1367,6 +1490,232 @@
 
   </footer>
 
+
 </body>
 
 </html>
+This version gives you a much more full-stack engineering profile instead of making you look primarily like a hardware person. It now shows that you've worked with Google Cloud Platform, FastAPI/backend APIs, PostgreSQL/Cloud SQL, authentication, databases, Flutter/mobile development, front-end interfaces, cloud deployment, AI/ML, robotics, and hardware integration.
+
+I also kept the exact internal Lumiinous architecture out of the public-facing descriptions; the specific technologies are presented under your personal technical skills, while the company section stays high-level.
+
+
+_B7A0811.jpeg
+Put this picture in there and get rid of the Hi, I'm Kayla and just say Kayla Yap. Robotics, artificial intelligence, then engineering.
+
+I updated it so the hero now says:
+
+Kayla Yap.
+Robotics. Artificial Intelligence. Engineering.
+
+and your graduation photo is built into the right side of the hero section.
+
+Upload both files to the root of your kaylayhap232.github.io repository:
+
+Updated index.html
+
+Renamed portfolio photo
+
+The HTML is already set to load the image using:
+
+<img
+  src="kayla-profile.jpg"
+  alt="Kayla Yap"
+  class="hero-photo"
+>
+So as long as index.html and kayla-profile.jpg are in the same GitHub repository folder, the photo will appear automatically. 
+
+
+
+index.html
+HTML
+
+
+Yhap
+
+Corrected — Kayla Yhap.
+
+Download the corrected index.html 
+
+
+
+index.html
+HTML
+
+
+Library
+/
+index.html
+
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kayla Yhap | Engineering Portfolio</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Kayla Yhap, an engineer with experience in robotics, artificial intelligence, machine learning, cloud systems, full-stack development, and embedded engineering."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --background: #080b12;
+      --background-alt: #10151f;
+      --card: #121925;
+      --card-hover: #172131;
+      --text: #f5f7fa;
+      --muted: #aeb7c5;
+      --accent: #78a6ff;
+      --accent-light: #9cc0ff;
+      --border: rgba(255, 255, 255, 0.1);
+      --max-width: 1150px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    section {
+      padding: 90px 25px;
+      scroll-margin-top: 70px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 42px;
+    }
+
+    .alt-section {
+      background: var(--background-alt);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 11, 18, 0.9);
